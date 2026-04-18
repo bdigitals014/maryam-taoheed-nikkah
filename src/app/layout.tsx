@@ -6,6 +6,7 @@ import Preloader from '@/components/common/preloader';
 import TailwindBreakpointIndicator from '@/components/common/tailwind-breakpoint-indicator';
 import { Toaster } from '@/components/ui/sonner';
 
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
@@ -200,6 +201,7 @@ export default function RootLayout({
 					<Preloader>{children}</Preloader>
 				</Providers>
 				<Toaster />
+				<Analytics />
 			</body>
 		</html>
 	);
