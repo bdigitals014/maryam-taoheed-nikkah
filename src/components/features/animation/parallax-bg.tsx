@@ -16,7 +16,7 @@ const ParallaxBg = () => {
 	return (
 		<motion.section ref={ref} className='relative h-screen overflow-hidden'>
 			<motion.div
-				className='absolute inset-0 min-h-[150%] w-full bg-[url(/images/hall.webp)] bg-cover bg-[50%_50%] bg-no-repeat'
+				className='absolute inset-0 min-h-[150%] w-full bg-[url(/images/hall2.webp)] bg-cover bg-[50%_50%] bg-no-repeat'
 				style={{ y }}
 			/>
 		</motion.section>

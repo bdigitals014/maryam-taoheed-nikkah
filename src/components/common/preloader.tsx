@@ -140,11 +140,15 @@ export default function Preloader({ children }: PreloaderProps) {
 					/>
 					<div className='absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center sm:gap-y-6'>
 						<div className='flex flex-col items-center gap-y-[0.6875rem] text-center sm:gap-y-[1.375rem]'>
-							<span className='font-aphrodite-slim-contextual text-primary text-2xl leading-[73%] tracking-[-0.03em] md:text-[2.5rem]'>
+							<span className='font-aphrodite-slim-contextual text-primary text-2xl leading-[63%] tracking-[-0.03em] md:text-[2.5rem]'>
 								<TextReveal lines={["You're welcome"]} />
 							</span>
-							<span className='font-louize-display text-xl leading-[120%] tracking-[-0.03em] text-[#232323]'>
-								<TextReveal maskLines delay={0.3} lines={['(#Naseebyqadr)']} />
+							<span className='font-louize-display text-xl leading-[100%] tracking-[-0.03em] text-[#232323]'>
+								<TextReveal
+									maskLines
+									delay={0.3}
+									lines={['(#Morire26 #TogetherInHalaalLove26)']}
+								/>
 							</span>
 						</div>
 						<div className='relative scale-50 max-[380px]:-my-5 sm:mt-12 sm:scale-100'>

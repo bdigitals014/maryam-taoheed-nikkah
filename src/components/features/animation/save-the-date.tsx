@@ -52,10 +52,10 @@ const SaveTheDate = () => {
 	return (
 		<section
 			ref={containerRef}
-			className='flex flex-col items-center gap-y-[8.4375rem] py-[9.125rem] md:overflow-hidden'
+			className='flex flex-col items-center gap-y-[8.4375rem] py-[9.125rem] lg:overflow-hidden'
 		>
 			<h3 className='text-primary font-aphrodite-slim-contextual -mb-2 text-[4.5rem] leading-[100%] tracking-[-0.03em] md:text-[6.25rem]'>
-				<TextReveal lines={['April']} />
+				<TextReveal lines={['May']} />
 			</h3>
 			<div className='relative'>
 				<motion.div
@@ -66,7 +66,7 @@ const SaveTheDate = () => {
 						classNames={{
 							base: 'rotate-[-18.53deg] relative',
 						}}
-						image='/images/hall.webp'
+						image='/images/mosque.webp'
 					/>
 				</motion.div>
 				<motion.div
@@ -81,7 +81,7 @@ const SaveTheDate = () => {
 					/>
 				</motion.div>
 				<motion.div
-					className='absolute right-[10%] bottom-[-65%] z-10 max-md:scale-50 max-md:rotate-[17.32deg] md:top-[90%] md:right-[unset] md:bottom-[unset] md:left-[57%]'
+					className='absolute right-[10%] bottom-[-65%] z-10 max-md:scale-50 max-md:rotate-[17.32deg] md:top-[110%] md:right-[unset] md:bottom-[unset] md:left-[57%]'
 					style={{ y: y3 }}
 				>
 					<Polaroid
@@ -89,7 +89,7 @@ const SaveTheDate = () => {
 							base: 'rotate-[3.45deg] relative',
 							image: 'w-[10.8875rem] h-[8.115rem]',
 						}}
-						image='/images/jollof.png'
+						image='/images/quran.webp'
 					/>
 				</motion.div>
 				<Calendar />

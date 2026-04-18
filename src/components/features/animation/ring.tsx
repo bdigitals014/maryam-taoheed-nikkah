@@ -130,12 +130,12 @@ export default function Ring() {
 						alt='Green heart'
 						height={590.23}
 						sizes='100vw'
-						src='/images/green-heart.webp'
+						src='/images/lilac-heart.webp'
 						width={590.23}
 					/>
 					<p className='text-primary-foreground absolute top-1/2 left-1/2 w-full max-w-[21.375rem] -translate-x-1/2 -translate-y-1/2 text-center text-sm leading-[120%] tracking-[-0.02em] max-md:max-w-[12.5rem] md:text-2xl'>
-						"And of His signs is that He created for you from yourselves mates
-						that you may find tranquility in them..." <br /> - Ar-Rum:21
+						"Marriage is part of my sunnah, and whoever does not follow my
+						sunnah has nothing to do with me" <br /> -[HADITH SAHIH]
 					</p>
 				</motion.div>
 			</div>

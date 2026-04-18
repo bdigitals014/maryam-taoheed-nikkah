@@ -127,8 +127,8 @@ export const viewport: Viewport = {
 	initialScale: 1,
 	maximumScale: 5,
 	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: '#00674E' },
-		{ media: '(prefers-color-scheme: dark)', color: '#00674E' },
+		{ media: '(prefers-color-scheme: light)', color: '#C8A2C8' },
+		{ media: '(prefers-color-scheme: dark)', color: '#C8A2C8' },
 	],
 };
 
@@ -138,37 +138,37 @@ const appUrl =
 export const metadata: Metadata = {
 	metadataBase: new URL(appUrl),
 	title: {
-		default: 'Nusaybah & Qais',
-		template: '%s | Nusaybah & Qais',
+		default: 'Maryam & Taoheed Aqh & Waleematun Nikkah Invitation',
+		template: '%s | Maryam & Taoheed Aqh & Waleematun Nikkah Invitation',
 	},
 	description:
-		'Join us in celebrating the wedding of Nusaybah and Qais. Saturday, 25 April 2026.',
-	keywords: ['wedding', 'Nusaybah', 'Qais', 'N&Q', 'invitation'],
-	authors: [{ name: 'Nusaybah & Qais' }],
-	creator: 'Nusaybah & Qais',
+		'Join us in celebrating the Aqh & Waleematun Nikkah of Maryam and Taoheed. Saturday, 30 May 2026.',
+	keywords: ['wedding', 'Maryam', 'Taoheed', 'M&T', 'invitation'],
+	authors: [{ name: 'Maryam & Taoheed' }],
+	creator: 'Maryam & Taoheed',
 	openGraph: {
 		type: 'website',
 		locale: 'en',
 		url: '/',
-		siteName: 'Nusaybah & Qais',
-		title: 'Nusaybah & Qais',
+		siteName: 'Maryam & Taoheed',
+		title: 'Maryam & Taoheed',
 		description:
-			'Join us in celebrating the wedding of Nusaybah and Qais. Saturday, 25 April 2026.',
+			'Join us in celebrating the wedding of Maryam and Taoheed. Saturday, 30 May 2026.',
 		images: [
 			{
-				url: '/images/nusaybah-and-qais.webp',
+				url: '/images/Maryam-and-Taoheed.png',
 				width: 1200,
 				height: 630,
-				alt: 'Nusaybah and Qais',
+				alt: 'Maryam and Taoheed',
 			},
 		],
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Nusaybah & Qais',
+		title: 'Maryam & Taoheed',
 		description:
-			'Join us in celebrating the wedding of Nusaybah and Qais. Saturday, 25 April 2026.',
-		images: ['/images/nusaybah-and-qais.webp'],
+			'Join us in celebrating the wedding of Maryam and Taoheed. Saturday, 30 May 2026.',
+		images: ['/images/Maryam-and-Taoheed.png'],
 	},
 	robots: {
 		index: true,

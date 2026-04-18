@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import { useAnimation } from 'motion/react';
 import * as motion from 'motion/react-client';
 
-const LETTERS = ['Q', 'N'] as const;
+const LETTERS = ['M', 'T'] as const;
 const REST_DURATION = 0.5;
 const SLIDE_DURATION = 0.8;
 
@@ -51,7 +51,7 @@ const PreloaderLetters = () => {
 						key={`${letter}-${String(i)}`}
 						className={cn(
 							'flex size-[2.3em] shrink-0 items-center justify-center',
-							letter === 'Q' && '-translate-x-2',
+							letter === 'T' && '-translate-x-2',
 						)}
 					>
 						{letter}

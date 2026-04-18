@@ -2,21 +2,21 @@ import React from 'react';
 
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
 
-// April 2026: 1st is Wednesday → offset 2 (Mon=0, Tue=1, Wed=2)
-const APRIL_2026_START_OFFSET = 2;
-const APRIL_DAYS = 30;
-const HIGHLIGHTED_DATE = 25;
+// May 2026: 1st is Friday → offset 4 (Mon=0, Tue=1, Wed=2, Thu=3, Fri=4)
+const MAY_2026_START_OFFSET = 4;
+const MAY_DAYS = 31;
+const HIGHLIGHTED_DATE = 30; // you can change this if needed
 
 function buildCalendarGrid(): (number | null)[] {
 	const grid: (number | null)[] = [];
 
 	// Empty cells before 1st
-	for (let i = 0; i < APRIL_2026_START_OFFSET; i++) {
+	for (let i = 0; i < MAY_2026_START_OFFSET; i++) {
 		grid.push(null);
 	}
 
-	// Dates 1–30
-	for (let d = 1; d <= APRIL_DAYS; d++) {
+	// Dates 1–31
+	for (let d = 1; d <= MAY_DAYS; d++) {
 		grid.push(d);
 	}
 

@@ -31,6 +31,50 @@ function ContactBlock({
 	);
 }
 
+function ColorCode({
+	colorlabel,
+	display1,
+	colorvalue1,
+	display2,
+	colorvalue2,
+}: {
+	colorlabel: string;
+	display1: string;
+	colorvalue1: string;
+	display2?: string;
+	colorvalue2?: string;
+}) {
+	return (
+		<div className='flex flex-col items-center gap-2'>
+			<span className='text-sm text-[#232323] md:text-base'>{colorlabel}</span>
+
+			<div className='flex overflow-hidden rounded-md border border-[#ddd]'>
+				<div
+					className='flex h-14 w-28 items-center justify-center'
+					style={{
+						backgroundColor: colorvalue1,
+						color: colorvalue2 ?? '#000',
+					}}
+				>
+					<span className='text-xs font-medium uppercase'>{display1}</span>
+				</div>
+
+				{colorvalue2 && display2 && (
+					<div
+						className='flex h-14 w-28 items-center justify-center'
+						style={{
+							backgroundColor: colorvalue2,
+							color: colorvalue1, // 👈 swapped
+						}}
+					>
+						<span className='text-xs font-medium uppercase'>{display2}</span>
+					</div>
+				)}
+			</div>
+		</div>
+	);
+}
+
 export default function Footer() {
 	return (
 		<footer className='bg-primary relative min-h-[200vh] w-full'>
@@ -57,14 +101,43 @@ export default function Footer() {
 							</h3>
 							<div className='flex flex-row flex-wrap justify-center gap-10'>
 								<ContactBlock
-									label="Groom's Family"
-									number='08114810116'
-									subLabel='Abdullah'
+									label="Bride's Family"
+									number='08142570256'
+									subLabel='Abdul Rosheed'
 								/>
 								<ContactBlock
-									label="Bride's Family"
-									number='09075556919'
-									subLabel='Umar'
+									label="Groom's Family"
+									number='08167443464'
+									subLabel='Hadj'
+								/>
+							</div>
+							<div className='flex flex-row flex-wrap justify-center gap-10'>
+								<ContactBlock label='' number='08056604078' subLabel='Zaynab' />
+								<ContactBlock
+									label=''
+									number='08065463837'
+									subLabel='Rokibah'
+								/>
+							</div>
+						</div>
+						<div className='flex flex-col items-center gap-8' id='rsvp'>
+							<h3 className='text-primary font-louize-display text-center text-[2.5rem] leading-[0.73em] tracking-[-0.03em] md:text-[3.125rem]'>
+								Colour Code
+							</h3>
+							<div className='flex flex-row flex-wrap justify-center gap-10'>
+								<ColorCode
+									colorlabel='Bride'
+									colorvalue1='#C8A2C8'
+									colorvalue2='#FFFFFF'
+									display1='Lilac'
+									display2='White'
+								/>
+								<ColorCode
+									colorlabel='Groom'
+									colorvalue1='#FFFFFF'
+									colorvalue2='#800080'
+									display1='White'
+									display2='Purple'
 								/>
 							</div>
 						</div>

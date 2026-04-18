@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const TARGET_DATE = new Date('2026-04-25T00:00:00');
+import { motion, useScroll, useTransform } from 'motion/react';
+
+const TARGET_DATE = new Date('2026-05-30T00:00:00');
 
 const padWithZero = (n: number) => n.toString().padStart(2, '0');
 
@@ -49,7 +51,15 @@ function TimeUnit({ value, label }: { value: string; label: string }) {
 }
 
 export default function CountdownTimer() {
+	const containerRef = useRef<HTMLDivElement>(null);
 	const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+
+	const { scrollYProgress } = useScroll({
+		target: containerRef,
+		offset: ['start end', 'end start'],
+	});
+
+	const parallaxY = useTransform(scrollYProgress, [0, 1], ['8%', '-18%']);
 
 	useEffect(() => {
 		const update = () => {
@@ -67,27 +77,29 @@ export default function CountdownTimer() {
 
 	if (timeLeft === null) {
 		return (
-			<div className='flex flex-col items-center lg:flex-row lg:gap-6'>
-				<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
-				<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
-					:
-				</span>
-				<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
-				<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
-					:
-				</span>
-				<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
-				<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
-					:
-				</span>
-				<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
+			<div ref={containerRef} className='relative lg:pt-5'>
+				<div className='flex flex-col items-center lg:flex-row lg:gap-6'>
+					<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
+					<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
+						:
+					</span>
+					<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
+					<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
+						:
+					</span>
+					<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
+					<span className='text-primary font-louize-display text-5xl leading-[65%] lg:text-[8rem]'>
+						:
+					</span>
+					<div className='bg-primary/60 h-[5.375rem] w-[5.4375rem] animate-pulse rounded-[0.55rem] lg:h-[12.25rem] lg:w-[9.8125rem] lg:rounded-2xl' />
+				</div>
 			</div>
 		);
 	}
 
 	return (
-		<div className='relative'>
-			<div className='absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2'>
+		<div ref={containerRef} className='relative lg:pt-5'>
+			<div className='absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 max-lg:-mt-4'>
 				<div className='flex flex-col items-center gap-y-[1.1875rem]'>
 					<p className='font-louize-display text-primary -ml-5 text-[12.5rem] leading-none tracking-[-0.03em]'>
 						{timeLeft.days + 1}
@@ -97,7 +109,10 @@ export default function CountdownTimer() {
 					</p>
 				</div>
 			</div>
-			<div className='pointer-events-none flex scale-125 flex-col items-center justify-center gap-2 opacity-15 lg:flex-row lg:gap-6'>
+			<motion.div
+				className='pointer-events-none flex flex-col items-center justify-center gap-2 opacity-15 will-change-transform lg:scale-125 lg:flex-row lg:gap-6'
+				style={{ y: parallaxY }}
+			>
 				<TimeUnit label='Days' value={timeLeft.days.toString()} />
 				<span
 					aria-hidden
@@ -120,7 +135,7 @@ export default function CountdownTimer() {
 					:
 				</span>
 				<TimeUnit label='Seconds' value={padWithZero(timeLeft.seconds)} />
-			</div>
+			</motion.div>
 		</div>
 	);
 }

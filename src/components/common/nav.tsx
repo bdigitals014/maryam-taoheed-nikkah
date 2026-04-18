@@ -43,9 +43,9 @@ const Nav = () => {
 					'bg-primary text-primary-foreground z-50 rounded-[0.375rem] px-4 py-3.5 text-lg leading-[90%] transition-colors duration-300 max-md:hidden',
 					isOpen && 'text-primary bg-primary-foreground',
 				)}
-				dateTime='2026-04-25'
+				dateTime='2026-05-30'
 			>
-				Saturday, 25 April 2026
+				Saturday, 30 May 2026
 			</time>
 			<span
 				className={cn(
@@ -53,7 +53,7 @@ const Nav = () => {
 					isOpen && 'text-primary-foreground',
 				)}
 			>
-				N&Q
+				M&T
 			</span>
 			<div>
 				<div className='hidden items-center gap-x-2 lg:flex'>
