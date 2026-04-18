@@ -144,10 +144,13 @@ export default function Preloader({ children }: PreloaderProps) {
 								<TextReveal lines={["You're welcome"]} />
 							</span>
 							<span className='font-louize-display text-xl leading-[100%] tracking-[-0.03em] text-[#232323]'>
+								<TextReveal maskLines delay={0.3} lines={['(#Morire26)']} />
+							</span>
+							<span className='font-louize-display text-xl leading-[100%] tracking-[-0.03em] text-[#232323]'>
 								<TextReveal
 									maskLines
-									delay={0.3}
-									lines={['(#Morire26 #TogetherInHalaalLove26)']}
+									delay={0.5}
+									lines={['(#TogetherInHalaalLove26)']}
 								/>
 							</span>
 						</div>
