@@ -144,7 +144,7 @@ export const metadata: Metadata = {
 	},
 	description:
 		'Join us in celebrating the Aqh & Waleematun Nikkah of Maryam and Taoheed. Saturday, 30 May 2026.',
-	keywords: ['wedding', 'Maryam', 'Taoheed', 'M&T', 'invitation'],
+	keywords: ['nikkah', 'Maryam', 'Taoheed', 'M&T', 'invitation'],
 	authors: [{ name: 'Maryam & Taoheed' }],
 	creator: 'Maryam & Taoheed',
 	openGraph: {
@@ -154,7 +154,7 @@ export const metadata: Metadata = {
 		siteName: 'Maryam & Taoheed',
 		title: 'Maryam & Taoheed',
 		description:
-			'Join us in celebrating the wedding of Maryam and Taoheed. Saturday, 30 May 2026.',
+			'Join us in celebrating the Aqh & Waleematun Nikkah of Maryam and Taoheed. Saturday, 30 May 2026.',
 		images: [
 			{
 				url: '/images/Maryam-and-Taoheed.png',
@@ -168,7 +168,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'Maryam & Taoheed',
 		description:
-			'Join us in celebrating the wedding of Maryam and Taoheed. Saturday, 30 May 2026.',
+			'Join us in celebrating theAqh & Waleematun Nikkah of Maryam and Taoheed. Saturday, 30 May 2026.',
 		images: ['/images/Maryam-and-Taoheed.png'],
 	},
 	robots: {
