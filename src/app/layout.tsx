@@ -6,7 +6,7 @@ import Preloader from '@/components/common/preloader';
 import TailwindBreakpointIndicator from '@/components/common/tailwind-breakpoint-indicator';
 import { Toaster } from '@/components/ui/sonner';
 
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
