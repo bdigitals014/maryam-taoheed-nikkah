@@ -133,7 +133,8 @@ export const viewport: Viewport = {
 };
 
 const appUrl =
-	process.env.NEXT_PUBLIC_APP_URL ?? 'https://naseeb-by-qadr.pages.dev';
+	process.env.NEXT_PUBLIC_APP_URL ??
+	'https://maryam-taoheed.sitesbybraitdigitals.name.ng';
 
 export const metadata: Metadata = {
 	metadataBase: new URL(appUrl),
