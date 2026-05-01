@@ -127,10 +127,10 @@ export default function Footer() {
 							<div className='flex flex-row flex-wrap justify-center gap-10'>
 								<ColorCode
 									colorlabel='Bride'
-									colorvalue1='#C8A2C8'
-									colorvalue2='#FFFFFF'
-									display1='Lilac'
-									display2='White'
+									colorvalue1='#FFFFFF'
+									colorvalue2='#C8A2C8'
+									display1='White'
+									display2='Lilac'
 								/>
 								<ColorCode
 									colorlabel='Groom'
