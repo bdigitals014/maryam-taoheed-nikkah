@@ -49,11 +49,11 @@ const Nav = () => {
 			</time>
 			<span
 				className={cn(
-					'font-louize-display left-5 z-50 text-2xl font-medium tracking-[-0.02em] text-[#232323] transition-colors duration-300 md:absolute md:left-1/2 md:-translate-x-1/2',
+					'font-louize-display left-5 z-50 text-5xl font-medium tracking-[-0.02em] text-[#232323] transition-colors duration-300 md:absolute md:left-1/2 md:-translate-x-1/2',
 					isOpen && 'text-primary-foreground',
 				)}
 			>
-				M&T
+				ت & م
 			</span>
 			<div>
 				<div className='hidden items-center gap-x-2 lg:flex'>

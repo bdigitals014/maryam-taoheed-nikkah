@@ -4,6 +4,7 @@ import SmoothScroll from '@/components/common/smooth-scroll';
 import HeroText from '@/components/features/animation/hero-text';
 import LivestreamPlayer from '@/components/features/animation/livestream-player';
 import ParallaxBg from '@/components/features/animation/parallax-bg';
+import Wishes from '@/components/features/animation/wishes';
 import Ring from '@/components/features/animation/ring';
 import SaveTheDate from '@/components/features/animation/save-the-date';
 import ScrollToExplore from '@/components/features/animation/scroll-to-explore';
@@ -87,7 +88,9 @@ export default function Home() {
 
 				<TyingRibbon />
 
-				<ParallaxBg />
+				<ParallaxBg>
+					<Wishes />
+				</ParallaxBg>
 
 				<section
 					className='flex flex-col items-center gap-y-[4.5625rem] py-[9.125rem] max-lg:pb-0'
