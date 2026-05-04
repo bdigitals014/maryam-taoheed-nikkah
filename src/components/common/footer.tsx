@@ -99,28 +99,39 @@ export default function Footer() {
 							<h3 className='text-primary font-louize-display text-center text-[2.5rem] leading-[0.73em] tracking-[-0.03em] md:text-[3.125rem]'>
 								RSVP
 							</h3>
-							<div className='flex flex-row flex-wrap justify-center gap-10'>
-								<ContactBlock
-									label="Bride's Family"
-									number='08142570256'
-									subLabel='Abdul Rosheed'
-								/>
-								<ContactBlock
-									label="Groom's Family"
-									number='08167443464'
-									subLabel='Hadj'
-								/>
-							</div>
-							<div className='flex flex-row flex-wrap justify-center gap-10'>
-								<ContactBlock label='' number='08056604078' subLabel='Zaynab' />
-								<ContactBlock
-									label=''
-									number='08065463837'
-									subLabel='Rokibah'
-								/>
+
+							{/* Container that handles the wrapping */}
+							<div className='flex flex-row flex-wrap justify-center gap-10 md:gap-20'>
+								{/* Bride's Family Group */}
+								<div className='flex flex-col gap-8'>
+									<ContactBlock
+										label="Bride's Family"
+										number='08142570256'
+										subLabel='Abdul Rosheed'
+									/>
+									<ContactBlock
+										label=''
+										number='08056604078'
+										subLabel='Zaynab'
+									/>
+								</div>
+
+								{/* Groom's Family Group */}
+								<div className='flex flex-col gap-8'>
+									<ContactBlock
+										label="Groom's Family"
+										number='08167443464'
+										subLabel='Hadj'
+									/>
+									<ContactBlock
+										label=''
+										number='08065463837'
+										subLabel='Rokibah'
+									/>
+								</div>
 							</div>
 						</div>
-						<div className='flex flex-col items-center gap-8' id='rsvp'>
+						<div className='flex flex-col items-center gap-8' id='colourcode'>
 							<h3 className='text-primary font-louize-display text-center text-[2.5rem] leading-[0.73em] tracking-[-0.03em] md:text-[3.125rem]'>
 								Colour Code
 							</h3>
