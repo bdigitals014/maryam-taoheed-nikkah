@@ -126,8 +126,8 @@
 @import 'tailwindcss';
 
 @theme {
-	--animate-marquee: marquee 25s linear infinite;
-	--animate-marquee-reverse: marquee-reverse 25s linear infinite;
+	--animate-marquee: marquee 50s linear infinite;
+	--animate-marquee-reverse: marquee-reverse 50s linear infinite;
 }
 
 @keyframes marquee {
